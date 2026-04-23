@@ -28,4 +28,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/dante-proxy:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/dante-proxy:latest
