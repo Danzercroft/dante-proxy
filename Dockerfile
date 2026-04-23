@@ -14,7 +14,7 @@ RUN apk add --no-cache \
 RUN curl -O https://www.inet.no/dante/files/dante-${DANTE_VER}.tar.gz && \
     tar xzf dante-${DANTE_VER}.tar.gz && \
     cd dante-${DANTE_VER} && \
-    ./configure \
+    CFLAGS="-D_GNU_SOURCE" ./configure \
         --prefix=/usr \
         --sysconfdir=/etc \
         --localstatedir=/var \
